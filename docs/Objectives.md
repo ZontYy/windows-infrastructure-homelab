@@ -9,7 +9,7 @@ Everything went smoothly.
 - Document: .\financials.txt
 - Share permissions: Read
 
-**Screenshots of proof**
+## **Screenshots of proof**
 
 ### JNovak can access and read
 
