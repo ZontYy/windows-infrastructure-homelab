@@ -17,9 +17,9 @@ Everything went smoothly.
 
 ### JNovak cannot save
 
-![Modify denied](/screenshots/jnovak-modify-denied.jpg?raw=true)
-![Modify denied](/screenshots/jnovak-modify-denied2.jpg?raw=true)
+![Modify denied](/screenshots/jnovak-modify-denied.jpg?raw=true "create a new file denied")
+![Modify denied](/screenshots/jnovak-modify-denied2.jpg?raw=true "write into an existing file denied")
 
 ### Users without security group cannot access the folder
 
-![Access denied](/screenshots/dzacek-access-denied.jpg.jpg?raw=true)
+![Access denied](/screenshots/dzacek-access-denied.jpg?raw=true)
