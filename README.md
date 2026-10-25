@@ -56,3 +56,10 @@ Since this brings another unnecessary privileged account (built-in Administrator
 
 Next, I wanted to create a GPO (Group Policy Object). I created one called `GPO-Workstation-Baseline` which will enforce baseline policies for all workstations on the domain.  
 As of right now, it only enforces an _Interactive Logon_ policy for _Title_ and _Text_ when trying to log in.
+
+### Firewall managed by GPO
+
+Another objective was to edit the GPO to also manage Firewall rules. I managed to do just that, verified everything works and documented it.  
+Next step was to enable logging, which also went smooth ON PAPER. For some reason I was unable to make the firewall service write to the logging file in my testing phase.  
+I tried basic connectivity test to an unused port, I tried adding a firewall rule for that specific port to block all traffic, but nothing seemed to help adding an entry to the log file.  
+I'll be getting back to this topic later.
