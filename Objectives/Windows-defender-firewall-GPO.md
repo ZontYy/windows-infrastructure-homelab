@@ -37,11 +37,25 @@ On _CLIENT01_ open an elevated PowerShell session and run:
 Then check the effective firewall configuration:
 
 ```powershell
-Get-NetFirewallProfile |
-    Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
+Get-NetFirewallProfile -PolicyStore ActiveStore |
+    Format-Table Name, Enabled, DefaultInboundAction, DefaultOutboundAction
 ```
 
 - Expected result: All profiles should show:  
   | Enabled | DefaultInboundAction | DefaultOutboundAction |
   | --------| -------------------- | --------------------- |
   | True | Block | Allow |
+- Actual result:
+  ![Firewall verification](/screenshots/Firewall-via-GPOs/Firewall-enforce-verification.jpg?raw=true)
+
+## 4. Firewall Logging
+
+Navigate to `Computer Configuration\Policies\Windows Settings\Security Settings\Windows Defender Firewall with Advanced Security`  
+Open the properties, select the **Domain Profile** tab and locate the logging section.
+Configure it as:
+| Setting | Value |
+| ----- | -----|
+| Log dropped packets | Yes |
+| Log successful connections | No |
+| Log file path | Default |
+| Size limit | Default for now |
