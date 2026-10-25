@@ -85,3 +85,5 @@ Since this account has elevated privileges and we already have an `Administrator
       - Actual result: False
 
 5. Verify that the account is really disabled by trying to log into it on `CLIENT01`
+   - Expected result: Account has been disabled
+   - Actual result: Your account has been disabled. Please see your system administrator.
