@@ -45,7 +45,7 @@ Get-NetFirewallProfile -PolicyStore ActiveStore |
   | Enabled | DefaultInboundAction | DefaultOutboundAction |
   | --------| -------------------- | --------------------- |
   | True | Block | Allow |
-- Actual result:
+- Actual result:  
   ![Firewall verification](/screenshots/Firewall-via-GPOs/Firewall-enforce-verification.jpg?raw=true)
 
 ## 4. Firewall Logging
