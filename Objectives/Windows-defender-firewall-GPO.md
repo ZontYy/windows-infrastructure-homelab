@@ -59,3 +59,28 @@ Configure it as:
 | Log successful connections | No |
 | Log file path | Default |
 | Size limit | Default for now |
+
+**Why these settings?**
+
+- **Dropped packets: Yes** - records packets dropped by Windows Defender Firewall. Useful when troubleshooting connectivity and investigating suspicious traffic.
+- **Successful connections: No** - avoid generating unnecessary log entries. Possible to enable later for more detailed traffic analysis.
+
+## 5. Apply and verify
+
+Apply all changes on **DC01** and verify on **CLIENT01**.  
+On **CLIENT01** refresh the current computer policy:  
+`gpupdate /target:computer /force`
+
+Then verify the effective logging configurations:
+
+```powershell
+Get-NetFirewallProfile -PolicyStore ActiveStore |
+    Select-Object Name, LogFileName, LogMaxSizeKilobytes,
+                  LogBlocked, LogAllowed
+```
+
+- Expected result: Domain Profile LogBlocked = True, LogAllowed = False
+- Actual result:  
+  ![Logging result](/screenshots/Firewall-via-GPOs/Logging-result.jpg?raw=true)
+
+## 6. Generate a controlled firewall event
