@@ -8,9 +8,15 @@
 
 # Services Config
 
+## AD DS
+
+- Hostname: DC01
+- FQDN: DC01.ad.zontcorp.test
+- Domain name: ad.zontcorp.test
+
 ## DNS
 
 - IP address: 192.168.40.250
-- Domain name: DC01.ad.zontcorp.test
+- Domain name: ad.zontcorp.test
 - Forwarder: 8.8.8.8, 8.8.4.4
   - Google's public DNS

@@ -1,7 +1,8 @@
 # Windows Server
 
 - Hostname: DC01
-- Domain name: DC01.ad.zontcorp.test
+- FQDN: DC01.ad.zontcorp.test
+- Domain name: ad.zontcorp.test
 - Accounts:
   - zontcorp: ZONTCORP\zontcorp
   - Administrator: ZONTCORP\Administrator
@@ -12,7 +13,7 @@
 
 - zontcorp
   - main account for the server
-  - administrator, full privilages
+  - administrator, full privileges
 - administrator
   - automatically created
   - administrator
@@ -22,4 +23,4 @@
   - User
 - Daniel Zacek
   - Employees OU
-  - Administrator
+  - User
