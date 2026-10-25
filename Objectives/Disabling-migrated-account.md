@@ -16,6 +16,12 @@ Since this account has elevated privileges and we already have an `Administrator
       Get-ADPrincipalGroupMembership -Identity "Administrator" |
       Select-Object Name, GroupScope, GroupCategory
       ```
+      **Verification:**
+      - Account is enabled: Confirmed
+      - Login on DC01: Successful
+      - Login on CLIENT01: Successful
+      - Administrative operations: Verified
+
 2. Check that the converted local account doesn't have any critical running services, tasks or scheduled scripts
    1. **On DC01, run:**
 
@@ -25,8 +31,8 @@ Since this account has elevated privileges and we already have an `Administrator
         Select-Object Name, State, StartMode, StartName
       ```
 
-      - Expected result: Empty
-      - Actual result: Empty
+      - Expected result: No matching services
+      - Actual result: No matching services found
 
    2. **Check scheduled tasks:**
 
@@ -40,8 +46,8 @@ Since this account has elevated privileges and we already have an `Administrator
           State
       ```
 
-      - Expected result: Empty
-      - Actual result: Empty
+      - Expected result: No matching scheduled tasks
+      - Actual result: No matching scheduled tasks found
 
    3. **Check currently running processes:**
 
@@ -65,8 +71,8 @@ Since this account has elevated privileges and we already have an `Administrator
           }
       ```
 
-      - Expected result: Empty
-      - Actual result: Empty
+      - Expected result: No matching processes
+      - Actual result: No matching processes found
 
 3. Review the evidence the account is safe to be disabled
 4. Disabling the account
@@ -85,5 +91,22 @@ Since this account has elevated privileges and we already have an `Administrator
       - Actual result: False
 
 5. Verify that the account is really disabled by trying to log into it on `CLIENT01`
+
+   **Attempt to log in to CLIENT01 using ZONTCORP\zontcorp credentials**
    - Expected result: Account has been disabled
    - Actual result: Your account has been disabled. Please see your system administrator.
+
+## Outcome
+
+The `zontcorp` domain account has been disabled successfully. The builtin `Adminstrator` account was verified as an alternative administrative account, and no service, scheduled task, or running process dependencies on `zontcorp` were identified
+
+The account was disabled rather than deleted to preserve its identity and existing security references, allowing it to be re-enabled if needed
+
+## Security rationale
+
+Why was this account disabled?
+
+- Reduce unnecessary privileged accounts
+- Apply the principle of least privilege
+- Preserve a recovery path by disabling rather than deleting the account
+- Verify administrative access before changing account status
