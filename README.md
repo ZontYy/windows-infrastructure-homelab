@@ -16,12 +16,13 @@ A hands-on virtual infrastructure lab designed to develop practical Windows syst
 
 ## Lab Environment
 
-| Component | Purpose | Status |
-|---|---|---|
-| Windows Server | Domain controller and DNS | In progress |
-| Windows Client | Domain-joined workstation | In progress |
-| VMware Workstation | Virtualization platform | In use |
-| Virtual router | Routing, NAT, and firewalling | Planned |
+| Component          | Purpose                       | Status      |
+| ------------------ | ----------------------------- | ----------- |
+| VMware Workstation | Virtualization platform       | In use      |
+| Windows Server     | Domain controller and DNS     | In use      |
+| Windows Client     | Domain-joined workstation     | In use      |
+| Linux Server       | Domain-joined NAS             | In progress |
+| Virtual router     | Routing, NAT, and firewalling | Planned     |
 
 ## Repository Structure
 
