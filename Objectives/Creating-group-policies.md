@@ -10,7 +10,7 @@ The main focus of this objective will be creating and managing group policies, t
 
 # Tasks
 
-1. Organize Active Directory with Organizational Units
+1. **Organize Active Directory with Organizational Units**
 
    I'll be creating this structure:
 
@@ -27,13 +27,13 @@ The main focus of this objective will be creating and managing group policies, t
 
 **Important:** Don't move `DC01` out of the builtin `Domain Controllers` OU
 
-2. Creating the first GPO
+2. **Creating the first GPO**
 
    My first GPO will be named: `GPO-Workstation-Baseline` and it will be linked to the `Workstations` OU  
    It will contain baseline configuration for every domain-joined workstation
    ![GPO created](/screenshots/Creating-GPOs-obj/GPO-created.jpg?raw=true)
 
-3. Configure the GPO
+3. **Configure the GPO**
 
    For testing purposes I'll only add `Interactive Logon: Message Text/Title for users attempting to log on`  
    I'll be adding more policies as I progress, but those will be different objectives
@@ -42,7 +42,7 @@ The main focus of this objective will be creating and managing group policies, t
    - Message title: Managed Device
    - Message text: This device is managed by ZONTCORP
 
-4. Verify that the GPO is active and enforced
+4. **Verify that the GPO is active and enforced**
 
    To verify, I'll first sign out of the account and try to sign back in
    - Expected result: Managed Device
