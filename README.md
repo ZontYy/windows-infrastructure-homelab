@@ -29,6 +29,7 @@ A hands-on virtual infrastructure lab designed to develop practical Windows syst
 - `docs/` — configuration guides, addressing plans, and troubleshooting notes.
 - `diagrams/` — network topology and infrastructure diagrams.
 - `screenshots/` — sanitized evidence of configurations and test results.
+- `objectives/` — tasks finished, in progress etc. Learning paths, verification, troubleshooting, the whole process
 
 ## Security
 
