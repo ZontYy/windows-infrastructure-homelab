@@ -38,4 +38,12 @@ No passwords, private keys, access tokens, or other sensitive credentials should
 
 The initial lab consists of a Windows Server VM and a Windows client VM connected through VMware's NAT network (VMnet8).
 
-The next milestone is to deploy Active Directory Domain Services, configure DNS, and join the client to the domain.
+Promoted DC01 to the AD DS role and set up a DNS server with a domain name `ad.zontcorp.test`
+
+Next, I created a shared folder along with a Security Group, then I applied NTFS permissions for the group and also Share permissions. Then I verified the accessibility.
+
+As my next objective I picked a security-oritented one. My local account `zontcorp` has most likely been automatically been converted to a Active Domain account when promoting.  
+Since this brings another unnecessary privileged account (built-in Administrator) I decided to disable it.
+
+Next, I wanted to create a GPO (Group Policy Object). I created one called `GPO-Workstation-Baseline` which will enforce baseline policies for all workstations on the domain.  
+As of right now, it only enforces an _Interactive Logon_ policy for _Title_ and _Text_ when trying to log in.
