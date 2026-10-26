@@ -91,10 +91,16 @@ Add-DnsServerForwarder -IPAddress 8.8.8.8, 8.8.4.4
 
 **Testing:**
 
-`Get-DnsServerForwarder`
+```powershell
+Get-DnsServerForwarder
+```
+
 I am able to see the configured forwarder here.
 
-`nslookup google.com`
+```powershell
+nslookup google.com
+```
+
 I got a successful reply.
 
 # 6. Joining the CLIENT01 to the domain
@@ -103,11 +109,18 @@ First I'll need to configure the DNS on the client to the `DC01` IP address. I'l
 
 ## 6.1. Verify domain-controller discovery
 
-On `CLIENT01` I'll run:  
-`nslookup -type=SRV _ldap._tcp.dc._msdcs.ad.zontcorp.test`
+On `CLIENT01` I'll run:
 
-Then:  
-`nltest /dsgetdc:ad.zontcorp.test`  
+```powershell
+nslookup -type=SRV _ldap._tcp.dc._msdcs.ad.zontcorp.test
+```
+
+Then:
+
+```powershell
+nltest /dsgetdc:ad.zontcorp.test
+```
+
 This command asks Windows to locate a domain controller for the domain
 Both commands succeeded.
 
