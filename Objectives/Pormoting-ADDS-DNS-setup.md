@@ -121,7 +121,7 @@ Then:
 nltest /dsgetdc:ad.zontcorp.test
 ```
 
-This command asks Windows to locate a domain controller for the domain
+This command asks Windows to locate a domain controller for the domain  
 Both commands succeeded.
 
 ## 6.2. Join the domain
