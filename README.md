@@ -63,3 +63,12 @@ Another objective was to edit the GPO to also manage Firewall rules. I managed t
 Next step was to enable logging, which also went smooth ON PAPER. For some reason I was unable to make the firewall service write to the logging file in my testing phase.  
 I tried basic connectivity test to an unused port, I tried adding a firewall rule for that specific port to block all traffic, but nothing seemed to help adding an entry to the log file.  
 I'll be getting back to this topic later.
+
+### Share mapped via GPO
+
+Goal for this objective was to map a SMB shared folder to domain-joined clients and only allow specific security groups to see it.  
+Shared folder for this objective was previously created `C:\Shares\FinanceReports` and the security group `Finance-Reports-Read`.  
+Jan Novak is already a part of the group and I then created a few more users for testing purposes. The newly created users aren't part of any groups for now, so that I can use them for testing as needed.
+
+I tested the final product with 2 accounts, Jan Novak and Eva Cerna. Eva is not part of the group and Jan is.  
+Jan was able to see the folder, which was expected, and Eva was not, also expected.
