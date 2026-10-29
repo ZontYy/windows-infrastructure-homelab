@@ -113,7 +113,7 @@ Get-ADUser "ksvoboda" -Properties LockedOut |
 Then try unlocking it:
 
 ```powershell
-Unlock-ADAccount -Identity "lockout.test"
+Unlock-ADAccount -Identity "ksvoboda"
 ```
 
 and run the check again
