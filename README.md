@@ -75,4 +75,9 @@ Jan was able to see the folder, which was expected, and Eva was not, also expect
 
 ### Configure Password and Account Lockout Policies
 
-In this objective I want to implement a working domain password policy and account lockout policy.
+In this objective I want to implement a working domain password policy and account lockout policy.  
+I started by checking the current default values and documenting those if needed in the future.  
+Next, I created the seperate GPO for managing password and account lockout policies. I didn't want to simply overwrite the `Default Domain Policy`, because I want my configurations to be organized.  
+After creating and configuring the GPO, I tried to verify my configuration but ran into an issue. The default values were still taking effect over my newly configured GPO.  
+I then checked the **Link Order** of both GPOs and found out that the default GPO has higher link order value, so I moved my new GPO to the top, updated the policies and checked effective values again. This time, my desired values were listed.  
+Finally I ran checks directly on the `CLIENT01` and all were successful.
