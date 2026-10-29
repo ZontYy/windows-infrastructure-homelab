@@ -72,3 +72,7 @@ Jan Novak is already a part of the group and I then created a few more users for
 
 I tested the final product with 2 accounts, Jan Novak and Eva Cerna. Eva is not part of the group and Jan is.  
 Jan was able to see the folder, which was expected, and Eva was not, also expected.
+
+### Configure Password and Account Lockout Policies
+
+In this objective I want to implement a working domain password policy and account lockout policy.
