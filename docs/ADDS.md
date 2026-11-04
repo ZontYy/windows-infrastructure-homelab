@@ -14,26 +14,11 @@
 
 # Accounts
 
-- zontcorp
-  - main account for the server
-  - administrator, full privileges
-  - **DISABLED**
-- administrator
-  - automatically created
-  - administrator
-
-- Jan Novak
-  - Employees OU
-  - User
-- Daniel Zacek
-  - Employees OU
-  - User
-- Eva Cerna
-  - Employees OU
-  - User
-- Kamil Svoboda
-  - Employees OU
-  - User
-- Honza Dvorak
-  - Employees OU
-  - User
+| Account Name  | Role          | OU        | Security Groups      | Status   |
+| ------------- | ------------- | --------- | -------------------- | -------- |
+| zontcorp      | administrator | n/a       | n/a                  | Disabled |
+| administrator | administrator | n/a       | n/a                  | Enabled  |
+| Jan Novak     | user          | Employees | finance-reports-read | Enabled  |
+| Eva Cerna     | user          | Employees | n/a                  | Enabled  |
+| Kamil Svoboda | user          | Employees | n/a                  | Enabled  |
+| Honza Dvorak  | user          | Employees | n/a                  | Enabled  |

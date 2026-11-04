@@ -4,12 +4,12 @@ Here I created a shared folder containing a document, assigned it to a security 
 Everything went smoothly.
 
 - User: Jan Novak
-- Security Group: Finance-Reports-Read
-- Shared folder: C:\Shares\FinanceReports
+- Security Group: `Finance-Reports-Read`
+- Shared folder: `C:\Shares\FinanceReports`
   - Server's local path to the folder
-- Document: .\financials.txt
+- Document: `.\financials.txt`
   - Server's local path to the document
-- SMB Path: \\DC01\FinanceReports
+- SMB Path: `\\DC01\FinanceReports`
 - Share permissions: Read
 - NTFS permissions: Read + List contents
 
