@@ -50,6 +50,23 @@ Since my homelab is tiny, I only configured the synch scope to only sync _Employ
 
 I enabled the synchronization, refeshed **Users** tab and all users from my Windows Server were correctly synced with Entra ID.
 
+# Task 3: Password Hash Synchronization validation
+
+I know I have PHS enabled, but I need to test it to be sure, and being able to continue with this project.
+
+## Resetting Jan Novak's password
+
+First, I reset Jan Novak's password on _DC01_.  
+After doing that, I'll need to wait a few minutes for the sync to take effect.
+
+## Verifying the sync was successful
+
+After waiting, I opened an incognito Edge window, and tried logging in to MS365.  
+Email: `jnovak@zontyy.org`  
+Password: _newly created one_
+
+Result: **Login successful**
+
 # Troubleshooting
 
 ## Provisioning test
@@ -68,3 +85,15 @@ The subsequent on-demand provisioning attempt returned:
 
 Initially, I interpreted this as another provisioning failure. However, after enabling the synchronization configuration, the users appeared successfully in Entra ID.  
 The message itself did not conclusively establish whether provisioning had succeeded; the successful synchronization and resulting user objects provided the confirmation.
+
+# Validation and Testing
+
+| Test                                             | Result                                  |
+| ------------------------------------------------ | --------------------------------------- |
+| Provisioning agent registration                  | Successful                              |
+| Agent service status                             | Running                                 |
+| OU-based synchronization scope                   | Configured                              |
+| AD user provisioning                             | Successful                              |
+| Custom UPN suffix synchronization                | Successful                              |
+| Cloud authentication using synchronized identity | Successful                              |
+| Password Hash Sychronization                     | Enabled; functional validation verified |
