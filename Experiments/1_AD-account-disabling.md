@@ -5,15 +5,15 @@
 When the user is signed out before his domain account gets disabled, Windows will usually allow to still log in using the **cached credentials**.
 
 However this really isn't a big deal, because after logging in the user would essentially be locked out anyway. I tried accessing the shared folder using the cached credentials and was unable to do so.
-[Cached credentials](/screenshots/Experiment-account-disabling/cached-credentials-share.jpg?raw=true)
+![Cached credentials](/screenshots/Experiment-account-disabling/cached-credentials-share.jpg?raw=true)
 
 Also, after signing in using the cached credentials, the user would soon be notified by Windows to sign out and back in using the current credentials and that would cause him to be locked out completely.
-[Account disabled](/screenshots/Experiment-account-disabling/account-disabled.jpg?raw=true)
+![Account disabled](/screenshots/Experiment-account-disabling/account-disabled.jpg?raw=true)
 
 ## User sign in when the account gets disabled
 
 This is a bit worse. When the user is signed in when his account gets disabled on the Server, the user still maintains his rights. I am able to access the shared folder, even tho my account is supposed to be disabled.
-[Proof](/screenshots/Experiment-account-disabling/account-disabled-proof.jpg?raw=true)
+![Proof](/screenshots/Experiment-account-disabling/account-disabled-proof.jpg)
 
 So best thing to do here, is to find the user's active session and terminate it. Then change his password (even if the account is disabled already), and revoke all sessions on Entra ID.
 
