@@ -18,9 +18,9 @@ This is a bit worse. When the user is signed in when his account gets disabled o
 So best thing to do here, is to find the user's active session and terminate it. Then change his password (even if the account is disabled already), and revoke all sessions on Entra ID.
 
 If we know the workstation the user is logged into, we can use the command:  
-`quser /server:<CLIENT_NAME>`
+`quser /server:<CLIENT_NAME>`  
 and then:  
-`logoff <SESSION_ID> /server:<CLIENT_NAME>`
+`logoff <SESSION_ID> /server:<CLIENT_NAME>`  
 
 If we don't know the session name, we can make a script that searches all domain-joined workstations and finds the active session with the given account name.
 
