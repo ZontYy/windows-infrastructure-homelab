@@ -81,3 +81,11 @@ Next, I created the seperate GPO for managing password and account lockout polic
 After creating and configuring the GPO, I tried to verify my configuration but ran into an issue. The default values were still taking effect over my newly configured GPO.  
 I then checked the **Link Order** of both GPOs and found out that the default GPO has higher link order value, so I moved my new GPO to the top, updated the policies and checked effective values again. This time, my desired values were listed.  
 Finally I ran checks directly on the `CLIENT01` and all were successful.
+
+### 8. Microsoft Entra ID setup
+
+During this objective I want to learn about and practice with Entra ID.
+As the first step I created a free MS Azure account.
+
+To connect Entra ID to my homelab, I decided to add my real domain `zontyy.org` as a UPN suffix on the Windows Server.  
+I first verified it on _Entra ID admin panel_ and then I configured my Windows Server to use it as a UPN suffix.
